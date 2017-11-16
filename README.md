@@ -16,6 +16,9 @@ npm install --save-dev --save-exact prettier
 [Prettier with ESLint](https://prettier.io/docs/en/eslint.html)
 npm install --save-dev eslint-config-prettier
 
+[Flow support]()
+npm install --save flow-bin
+
 
 
 ## Folder Structure
@@ -80,3 +83,26 @@ Your app is ready to be deployed!
 
 See the section about [deployment](#deployment) for more information.
 
+## Running Tests
+
+### Filename Conventions
+
+Create React App uses [Jest](https://facebook.github.io/jest/) as its test runner.
+
+Jest will look for test files with any of the following popular naming conventions:
+
+* Files with `.js` suffix in `__tests__` folders.
+* Files with `.test.js` suffix.
+* Files with `.spec.js` suffix.
+
+The `.test.js` / `.spec.js` files (or the `__tests__` folders) can be located at any depth under the `src` top level folder.
+
+We recommend to put the test files (or `__tests__` folders) next to the code they are testing so that relative imports appear shorter. For example, if `App.test.js` and `App.js` are in the same folder, the test just needs to `import App from './App'` instead of a long relative path. Colocation also helps find tests more quickly in larger projects.
+
+### Command Line Interface
+
+When you run `npm test`, Jest will launch in the watch mode. Every time you save a file, it will re-run the tests, just like `npm start` recompiles the code.
+
+The watcher includes an interactive command-line interface with the ability to run all tests, or focus on a search pattern. It is designed this way so that you can keep it open and enjoy fast re-runs. You can learn the commands from the “Watch Usage” note that the watcher prints after every run:
+
+![Jest watch mode](http://facebook.github.io/jest/img/blog/15-watch.gif)
