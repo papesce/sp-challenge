@@ -7,8 +7,15 @@ create-react-app spotify-challenge
 [create-react-app doc](/docs/CREATE_REACT_APP.md)
 [create-react-app doc remote](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)
 
+[ESlint]()
+npm install --save-dev eslint
+
 [Prettier](https://prettier.io/docs/en/install.html)
 npm install --save-dev --save-exact prettier
+
+[Prettier with ESLint](https://prettier.io/docs/en/eslint.html)
+npm install --save-dev eslint-config-prettier
+
 
 
 ## Folder Structure
