@@ -21,3 +21,5 @@ export const storeFactory = initialState =>
     initialState,
     applyMiddleware(rMiddleware, createLogger())
   );
+
+  export const store = storeFactory();
