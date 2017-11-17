@@ -26,6 +26,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "flow": "flow",
+    "postinstall": "npm run build",
     "server": "npm run build && node server/server.js"
   },
   "devDependencies": {
