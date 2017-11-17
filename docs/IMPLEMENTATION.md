@@ -36,3 +36,8 @@ npm install --save history
 
 [History (required by React Router Redux)](https://github.com/ReactTraining/history)
 
+[Material-ui](https://material-ui-next.com/getting-started/installation/)
+npm install --save material-ui@next
+npm install --save typeface-roboto   
+npm install --save material-ui-icons
+

@@ -1,9 +1,18 @@
-import React, {Component} from 'react'
+import React, { Component } from "react";
+import AccountBox from 'material-ui-icons/AccountBox'
+import TopAppBar from './TopAppBar'
 
 
-export default class LoginPage extends Component {
-    render() {
-       return (<p>login page</p>)
-    }
-
+class LoginPage extends Component {
+  render() {
+    return (
+      <div >
+         <TopAppBar/>
+        <p>login page</p>
+        <AccountBox /> 
+      </div>
+    );
+  }
 }
+
+export default LoginPage

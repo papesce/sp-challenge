@@ -1,10 +1,11 @@
-import React, {Component} from 'react'
-
+import React, { Component } from "react";
+import TopAppBar from "./TopAppBar";
 
 export default class HomePage extends Component {
-    render() {
-        return (
-            <p>token</p>
-        );
-    }
+  render() {
+    return (<div>
+        <TopAppBar/>
+        </div>
+    );
+  }
 }

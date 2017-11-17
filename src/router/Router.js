@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router";
 import HomePage from "../components/HomePage";
 import LoginPage from "../components/LoginPage";
 
+
 // Create a history of your choosing (we're using a browser history in this case)
 export const history = createHistory();
 
