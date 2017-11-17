@@ -19,11 +19,23 @@ npm install --save-dev eslint-config-prettier
 [Flow support]()
 npm install --save flow-bin
 
+[Enzyme support]()
+npm install --save enzyme enzyme-adapter-react-16 react-test-renderer
 
+[Redux](https://github.com/reactjs/redux)
+npm install --save redux
+
+[React-router-Redux](https://github.com/reactjs/react-router-redux)
+npm install --save react-router-redux
+
+[History](https://github.com/ReactTraining/history)
+npm install --save history
+
+[Redux Logger](https://github.com/evgenyrodionov/redux-logger)
+npm install --save redux-logger
 
 ## Folder Structure
 
-```
 spotify-challenge/
   README.md
   node_modules/
@@ -83,6 +95,12 @@ Your app is ready to be deployed!
 
 See the section about [deployment](#deployment) for more information.
 
+## Authentication
+
+https://github.com/auth0-blog/redux-auth/blob/master/README.md
+
+
+
 ## Running Tests
 
 ### Filename Conventions
@@ -106,3 +124,13 @@ When you run `npm test`, Jest will launch in the watch mode. Every time you save
 The watcher includes an interactive command-line interface with the ability to run all tests, or focus on a search pattern. It is designed this way so that you can keep it open and enjoy fast re-runs. You can learn the commands from the “Watch Usage” note that the watcher prints after every run:
 
 ![Jest watch mode](http://facebook.github.io/jest/img/blog/15-watch.gif)
+
+
+### Coverage Reporting
+
+Jest has an integrated coverage reporter that works well with ES6 and requires no configuration.<br>
+Run `npm test -- --coverage` (note extra `--` in the middle) to include a coverage report like this:
+
+![coverage report](http://i.imgur.com/5bFhnTS.png)
+
+Note that tests run much slower with coverage so it is recommended to run it separately from your normal workflow.
