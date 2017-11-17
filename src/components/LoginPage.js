@@ -52,8 +52,8 @@ class LoginPage extends Component {
          <div className={classes.details}>
          <CardContent className={classes.content}>
                 <Typography type="body1">
-                    To use this app you need to have an Spotify account. Please
-                    use the button below to request access to the Spotify API.
+                    To use this app you need to have a Spotify account. Please
+                    use the button below to login to Spotify.
                 </Typography> 
              </CardContent>
              <div className={classes.controls}>

@@ -24,11 +24,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "flow": "flow"
+    "flow": "flow",
+    "server": "node server/server.js"
   },
   "devDependencies": {
     "eslint": "4.11.0",
     "eslint-config-prettier": "2.7.0",
-    "prettier": "1.8.2"
+    "prettier": "1.8.2",
+    "spotify-web-api-node": "2.5.0"
   }
 }
