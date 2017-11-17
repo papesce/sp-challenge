@@ -7,6 +7,7 @@ import Typography from 'material-ui/Typography';
 import { withStyles } from 'material-ui/styles';
 import logo from '../spotify-logo.png';
 
+
 const styles = theme => ({
     card: {
         display: 'flex',
@@ -37,7 +38,7 @@ const styles = theme => ({
 
 class LoginPage extends Component {
   render() {
-    const { classes, theme } = this.props;
+    const { classes, spotify_url = "/serverlogin" } = this.props;
     return (
       <div >
          <TopAppBar/>
@@ -46,7 +47,7 @@ class LoginPage extends Component {
          <CardMedia
           className={classes.cover}
           image={logo}
-          title="Live from space album cover"
+          title=""
         />
          <div className={classes.details}>
          <CardContent className={classes.content}>
@@ -57,7 +58,7 @@ class LoginPage extends Component {
              </CardContent>
              <div className={classes.controls}>
              <CardActions>
-                <Button dense>Login to Spotify</Button>
+                <Button  raised color="primary" href={spotify_url}>Login to Spotify</Button>
            </CardActions>
 
            </div>
