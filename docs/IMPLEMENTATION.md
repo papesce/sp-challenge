@@ -20,6 +20,9 @@ npm install --save enzyme enzyme-adapter-react-16 react-test-renderer
 [React Router](https://github.com/ReactTraining/react-router/tree/master/packages/react-router)
 npm install --save react-router
 
+[React Router DOM]()
+npm install --save react-router-dom
+
 [Redux](https://github.com/reactjs/redux)
 npm install --save redux
 

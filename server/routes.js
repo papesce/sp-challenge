@@ -5,13 +5,26 @@ const path = require("path");
 
 const BUILD_PATH = path.resolve(__dirname, "../build");
 const APP_PATH = BUILD_PATH + '/index.html';
-const HOST = "http://localhost:3000";
-//const HOST = 'https://spotify-react-proxy.herokuapp.com'
 
-const CLIENT_ID = process.env.client_id || "ea8767bb8c8e4d918d361ef8f0ed226f";
-const CLIENT_SECRET =
+const useLocal = false;
+
+const HOST_LOCAL = "http://localhost:3000";
+const HOST_REMOTE = 'https://papesce-spotify-challenge.herokuapp.com'
+
+let HOST = HOST_REMOTE;
+if (useLocal)  HOST = HOST_LOCAL; 
+
+
+let CLIENT_ID = process.env.client_id || "ea8767bb8c8e4d918d361ef8f0ed226f";
+let CLIENT_SECRET =
   process.env.client_secret || "b64ea7fb30614aaabc008470a72f808a";
-const REDIRECT_URI = process.env.redirect_uri || `${HOST}/callback`;
+if (useLocal) {
+  CLIENT_ID = process.env.client_id || '844625938f10463086a5418f6eb5f1a1';
+  CLIENT_SECRET = process.env.client_secret || "bed7ed48261b4400b4c141580d68467c";
+}
+
+
+  const REDIRECT_URI = process.env.redirect_uri || `${HOST}/callback`;
 const STATE_KEY = "spotify_auth_state";
 // configure spotify
 const spotifyApi = new Spotify({
