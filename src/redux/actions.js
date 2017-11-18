@@ -1,11 +1,8 @@
-import {LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE} from './actionTypes'
+import {LOGIN_SUCCESS, LOGIN_FAILURE} from './actionTypes'
 
-export function loginRequest() {
-    return {type: LOGIN_REQUEST}
-}
 
-export function loginSuccess(token) {
-    return {type: LOGIN_SUCCESS, auth_token: token}
+export function loginSuccess(auth_token, refresh_token, expiration) {
+    return {type: LOGIN_SUCCESS, auth_token, refresh_token, expiration}
 }
 
 export function loginFailure(error) {

@@ -5,11 +5,13 @@ import { Redirect } from 'react-router-dom';
 import {connect}  from 'react-redux'
 import {loginSuccess} from '../redux/actions'
 
-class LoginContainer extends Component {
+export class LoginContainer extends Component {
     componentDidMount(){
-        const {auth_token, refresh_token, expiration} = this.props.match.params;
-        if (auth_token) {
-            this.props.setToken(auth_token);
+        if (this.props.match) {
+          const {auth_token, refresh_token, expiration} = this.props.match.params;
+          if (auth_token) {
+            this.props.setToken(auth_token, refresh_token, expiration);
+          }
         }
     }
     render () {
@@ -31,7 +33,8 @@ class LoginContainer extends Component {
 const mapDispatchToProps = (dispatch) => {
     //debugger;
     return {
-      setToken: (token) => {dispatch(loginSuccess(token))},
+      setToken: (auth_token, refresh_token, expiration) => 
+      {dispatch(loginSuccess(auth_token, refresh_token, expiration))},
     }
   }
 
