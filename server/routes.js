@@ -6,7 +6,7 @@ const path = require("path");
 const BUILD_PATH = path.resolve(__dirname, "../build");
 const APP_PATH = BUILD_PATH + '/index.html';
 
-const useLocal = false;
+const useLocal = (process.env.NODE_ENV !== 'production');
 
 const HOST_LOCAL = "http://localhost:3000";
 const HOST_REMOTE = 'https://papesce-spotify-challenge.herokuapp.com'
@@ -35,7 +35,7 @@ const spotifyApi = new Spotify({
 // your application requests authorization
 const scopes = ["user-read-private", "user-read-email"];
 
-router.get("/token/:auth_token/:refresh_token/:expiration", function(_, res) {
+router.get("/login/:auth_token/:refresh_token/:expiration", function(_, res) {
   res.sendFile(APP_PATH );
 });
 
