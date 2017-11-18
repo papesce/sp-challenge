@@ -6,7 +6,6 @@ import { Router } from "./router/Router";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import createMuiTheme from 'material-ui/styles/createMuiTheme'
 import green from 'material-ui/colors/green';
-import blue from 'material-ui/colors/blue';
 
 import "./App.css";
 import "typeface-roboto";

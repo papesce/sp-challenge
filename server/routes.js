@@ -35,7 +35,7 @@ const spotifyApi = new Spotify({
 // your application requests authorization
 const scopes = ["user-read-private", "user-read-email"];
 
-router.get("/token/:tok", function(_, res) {
+router.get("/token/:auth_token/:refresh_token/:expiration", function(_, res) {
   res.sendFile(APP_PATH );
 });
 
@@ -59,7 +59,7 @@ router.get("/callback", (req, res) => {
     .authorizationCodeGrant(code)
     .then(data => {
       const { expires_in, access_token, refresh_token } = data.body;
-      res.redirect(`/token/${access_token}`);
+      res.redirect(`/login/${access_token}/${refresh_token}/${expires_in}`);
     })
     .catch(err => {
       res.redirect("/error");

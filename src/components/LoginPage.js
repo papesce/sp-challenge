@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import AccountBox from 'material-ui-icons/AccountBox'
 import TopAppBar from './TopAppBar'
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Button from 'material-ui/Button';
@@ -37,12 +36,11 @@ const styles = theme => ({
 })
 
 class LoginPage extends Component {
-  render() {
-    const { classes, spotify_url = "/serverlogin" } = this.props;
+  render() {  
+    const { classes, spotify_url } = this.props;
     return (
       <div >
          <TopAppBar/>
-         
          <Card className={classes.card}>
          <CardMedia
           className={classes.cover}
