@@ -21,6 +21,7 @@ class LoginContainer extends Component {
         if (isLoading) {
             return <LoadingUserPage />;
         } 
+       
         return (
             <LoginPage spotify_url="/serverlogin"/>
         )
