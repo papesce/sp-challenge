@@ -26,12 +26,14 @@ npm install --save react-router-dom
 [Redux](https://github.com/reactjs/redux)
 npm install --save redux
 
+npm install --save redux-actions
+
 [Redux Logger](https://github.com/evgenyrodionov/redux-logger)
 npm install --save redux-logger
 
 [React Redux](https://github.com/reactjs/react-redux)
-npm install -save react-redux
-
+npm install --save react-redux
+npm install --save redux-thunk-actions
 
 [React Router Redux](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-redux)
 npm install --save react-router-redux@next
@@ -44,7 +46,11 @@ npm install --save material-ui@next
 npm install --save typeface-roboto   
 npm install --save material-ui-icons
 
+[Redux Thunk](https://github.com/gaearon/redux-thunk)
+npm install --save redux-thunk
 
+[Spotify web API](https://github.com/JMPerez/spotify-web-api-js)
+npm install --save spotify-web-api-js
 
 ## Server side approach to authenticate users:
 

@@ -1,4 +1,17 @@
-//export const LOGIN_REQUEST = "LOGIN_REQUEST"
+
+
+/**
+ * LOGIN ACTIONS
+ */
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS"
 export const LOGIN_FAILURE = "LOGIN_FAILURE"
 export const LOGOUT = "LOGOUT"
+
+
+/**
+ * SEARCH ACTIONS
+ */
+export const SEARCH = "SEARCH"
+export const SEARCH_STARTED = "SEARCH_STARTED"
+export const SEARCH_SUCCEEDED = "SEARCH_SUCCEEDED"
+export const SEARCH_FAILED = "SEARCH_FAILED"

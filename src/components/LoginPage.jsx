@@ -37,7 +37,7 @@ const styles = theme => ({
 
 class LoginPage extends Component {
   render() {  
-    const { classes, spotify_url } = this.props;
+    const { classes, login_url } = this.props;
     return (
       <div >
          <TopAppBar/>
@@ -56,7 +56,7 @@ class LoginPage extends Component {
              </CardContent>
              <div className={classes.controls}>
              <CardActions>
-                <Button  raised color="primary" href={spotify_url}>Login to Spotify</Button>
+                <Button  raised color="primary" href={login_url}>Login to Spotify</Button>
            </CardActions>
 
            </div>

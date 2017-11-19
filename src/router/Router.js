@@ -15,7 +15,6 @@ export const Router = () => (
       <Route exact path="/" component={HomeContainer} />
       <Route path="/login/:auth_token/:refresh_token/:expiration" component={LoginContainer} />
       <Route path="/login" component={LoginContainer} />
-    
     </Switch>
   </ConnectedRouter>
 );

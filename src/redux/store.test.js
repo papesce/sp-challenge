@@ -5,30 +5,40 @@ describe("Store Factory", () => {
 
     let store;
 
-    it("should Keep the user state", () => {
-        let user = {};
-        store = storeFactory({user});
-        let state = store.getState()
-        expect(state.user).toBeDefined();
-        expect(state.user).toBe(user);
-    }) 
+    describe("Store user info", () => {
 
-    it("should dispatch loginSuccess action", () => {
-        let userInfo = {};
-        store = storeFactory({user: userInfo});
-        store.dispatch(loginSuccess("token"));
-        let state = store.getState()
-        expect(state.user).toBeDefined();
-        expect(state.user).toEqual({auth_token: "token"});
-    }) 
+        it("should Keep the user state", () => {
+            let userInfo = {};
+            store = storeFactory({user: userInfo});
+            let state = store.getState()
+            expect(state.user).toBeDefined();
+            expect(state.user).toBe(userInfo);
+        }) 
 
-    it("should dispatch loginFailure action", () => {
-        let userInfo = {};
-        store = storeFactory({user: userInfo});
-        store.dispatch(loginFailure("error message"));
-        let state = store.getState()
-        expect(state.user).toBeDefined();
-        expect(state.user).toEqual({error: "error message"});
-    }) 
+        it("should dispatch loginSuccess action", () => {
+            let userInfo = {};
+            store = storeFactory({user: userInfo});
+            store.dispatch(loginSuccess("token"));
+            let state = store.getState()
+            expect(state.user).toBeDefined();
+            expect(state.user).toEqual({auth_token: "token"});
+        }) 
+
+        it("should dispatch loginFailure action", () => {
+            let userInfo = {};
+            store = storeFactory({user: userInfo});
+            store.dispatch(loginFailure("error message"));
+            let state = store.getState()
+            expect(state.user).toBeDefined();
+            expect(state.user).toEqual({error: "error message"});
+        }) 
+    })
+
+    describe("Store search results",  () => {
+
+        it("", () => {
+            
+        })
+    })
 
 })

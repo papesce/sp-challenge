@@ -16,7 +16,6 @@ export class LoginContainer extends Component {
     }
     render () {
         const {isAuth, isLoading} = this.props;
-        //debugger;
         if (isAuth) {
             return <Redirect to="/" />; 
         }
@@ -25,7 +24,7 @@ export class LoginContainer extends Component {
         } 
        
         return (
-            <LoginPage spotify_url="/serverlogin"/>
+            <LoginPage login_url="/serverlogin"/>
         )
     }
 }
@@ -34,7 +33,7 @@ const mapDispatchToProps = (dispatch) => {
     //debugger;
     return {
       setToken: (auth_token, refresh_token, expiration) => 
-      {dispatch(loginSuccess(auth_token, refresh_token, expiration))},
+        {dispatch(loginSuccess(auth_token, refresh_token, expiration))},
     }
   }
 

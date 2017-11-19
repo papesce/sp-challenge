@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import TopAppBar from "./TopAppBar";
+import SearchBar from './SearchBar';
+
 
 export default class HomePage extends Component {
   render() {
     return (
       <div>
         <TopAppBar />
-        <p>I have the token so I’m ready to rock ! :)  (comming soon)</p>
+        <SearchBar />
       </div>
     );
   }
