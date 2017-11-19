@@ -14,14 +14,19 @@ spotify-challenge/
     index.html
     favicon.ico
   src/
-    Components/
-    Redux/
+    components/
+    containers/
+    redux/
+    router/
     App.css
     App.js
     App.test.js
     index.css
     index.js
     logo.svg
+  server/
+  docs/
+    
 ```
 
 For the project to build, **these files must exist with exact filenames**:
