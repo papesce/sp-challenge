@@ -3,6 +3,7 @@ import Album from './Album'
 import { GridList, GridListTile } from 'material-ui/GridList';
 import { withStyles } from 'material-ui/styles';
 import Subheader from 'material-ui/List/ListSubheader';
+import Progress from './Progress';
 
 
 const styles = theme => ({
@@ -24,14 +25,16 @@ export class Albums extends Component {
      const {classes, albums} = this.props;  
     return (
       <div className={classes.container}>
-      <GridList cellHeight={180} className={classes.gridList}>
+      {(albums && albums.items) ? 
+      (<GridList cellHeight={180} className={classes.gridList}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
           <Subheader component="div">Albums</Subheader>
         </GridListTile>
         {albums && albums.items && albums.items.map((album, index) => (
             <Album key={index} album={album}/>
         ))}
-      </GridList>
+      </GridList>) : <Progress status="searching..." />
+      }
       </div>
     )
   }

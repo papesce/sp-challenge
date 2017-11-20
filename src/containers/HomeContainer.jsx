@@ -9,7 +9,6 @@ class HomeContainer extends Component {
     
     render() {
         const {isAuth, albums} = this.props;
-        //debugger;
         if (!isAuth)  return <Redirect to="/login" />;  
         return (<div>
                <HomePage albums={albums}/>
@@ -18,7 +17,6 @@ class HomeContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-    //debugger;
     return {
         isAuth : getToken(state) !== undefined,
         albums : getAlbums(state)

@@ -1,5 +1,5 @@
-import {LOGIN_SUCCESS,LOGIN_FAILURE} from './actionTypes'
-import {SEARCH_SUCCEEDED} from './actionTypes'
+import {LOGIN_SUCCESS,LOGIN_FAILURE, SEARCH_FAILED} from './actionTypes'
+import {SEARCH_SUCCEEDED, SEARCH_CLEAR, SEARCH_STARTED} from './actionTypes'
 
 
 
@@ -18,8 +18,13 @@ export function loginReducer(prevState = {}, action) {
 export function searchReducer(prevState = {}, action) {
     switch (action.type) {
     case SEARCH_SUCCEEDED:
-        debugger;
         return {albums: action.payload.albums}
+    case SEARCH_FAILED:
+        return {albums: JSON.parse(action.payload.response)}
+    case SEARCH_STARTED:
+        return {albums: {loading: true}}
+    case SEARCH_CLEAR:
+        return {albums: {}}
     default:
     }
     return prevState;
