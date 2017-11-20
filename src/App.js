@@ -1,4 +1,3 @@
-// @flow
 import React, { Component } from "react";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
@@ -17,8 +16,8 @@ const muiTheme = createMuiTheme({
   palette: {
     primary: {
       ...green,
-      500: '#43A047',
-    },
+      '500' : "#43A047"
+    }
   } 
 })
 

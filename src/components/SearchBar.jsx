@@ -2,6 +2,16 @@ import React, { Component } from "react";
 import TextField from 'material-ui/TextField';
 import {connect} from 'react-redux'
 import {search} from '../redux/actions'
+import { withStyles } from 'material-ui/styles';
+
+const styles = theme => ({
+    bar: {
+      marginLeft: 5* theme.spacing.unit,
+      marginRight:  5 * theme.spacing.unit,
+      marginTop: 4 *  theme.spacing.unit,
+      width: "90%"
+    },
+})
 
 export class SearchBar extends Component {
   constructor(props) {
@@ -12,11 +22,13 @@ export class SearchBar extends Component {
     this.props.search("jewel")
   }
   render() {
+    const {classes} = this.props;
     return (
-      <div>
-        <TextField
+      <div >
+        <TextField 
+          className= {classes.bar}
           id="search"
-          label="Search field"
+          label="Enter albums name"
           type="search"
           //npm className={classes.textField}
           margin="normal"
@@ -33,4 +45,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(undefined ,mapDispatchToProps)(SearchBar)
+export default connect(undefined, mapDispatchToProps)(withStyles(styles)(SearchBar))

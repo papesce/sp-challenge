@@ -2,20 +2,26 @@ import React, {Component} from 'react'
 import HomePage from '../components/HomePage'
 import {connect} from 'react-redux'
 import { Redirect } from 'react-router-dom';
+import { getToken, getAlbums } from '../redux/selectors';
+
 
 class HomeContainer extends Component {
     
     render() {
-        const {isAuth} = this.props;
+        const {isAuth, albums} = this.props;
         //debugger;
         if (!isAuth)  return <Redirect to="/login" />;  
-        return (<HomePage/>)
+        return (<div>
+               <HomePage albums={albums}/>
+        </div>)
     }    
 }
 
 const mapStateToProps = (state) => {
+    //debugger;
     return {
-        isAuth : state.user.auth_token !== undefined
+        isAuth : getToken(state) !== undefined,
+        albums : getAlbums(state)
     }
 }
 

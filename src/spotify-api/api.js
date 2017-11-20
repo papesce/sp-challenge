@@ -1,10 +1,10 @@
 import Spotify from 'spotify-web-api-js';
-import {getToken} from '../redux/store'
+import {getToken} from '../redux/selectors'
 
 const spotifyApi = new Spotify();
 
 export const apiSearch = (searchText, args) =>  {
-    const {getState, dispatch} = args;
+    const {getState} = args;
     const state = getState();
     const token = getToken(state);
     spotifyApi.setAccessToken(token);
