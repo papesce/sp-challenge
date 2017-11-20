@@ -4,7 +4,6 @@ exports[`Album tests renders correctly 1`] = `
 <div
   className="Albums-container-1"
 >
-  (
   <ul
     className="MuiGridList-root-3 Albums-gridList-2"
     style={
@@ -105,6 +104,5 @@ exports[`Album tests renders correctly 1`] = `
       </div>
     </li>
   </ul>
-  ) }
 </div>
 `;

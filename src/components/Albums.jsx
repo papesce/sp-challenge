@@ -25,15 +25,14 @@ export class Albums extends Component {
      const {classes, albums} = this.props;  
     return (
       <div className={classes.container}>    
-      (<GridList cellHeight={180} className={classes.gridList}>
+       <GridList cellHeight={180} className={classes.gridList}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
           <Subheader component="div">Albums</Subheader>
         </GridListTile>
         {albums && albums.items && albums.items.map((album, index) => (
             <Album key={index} album={album}/>
         ))}
-      </GridList>) 
-      }
+      </GridList>
       </div>
     )
   }
