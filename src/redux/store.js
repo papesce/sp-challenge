@@ -4,9 +4,9 @@ import { history } from "../router/Router";
 import { createLogger } from "redux-logger";
 import { loginReducer, searchReducer } from "./reducers";
 import thunkMiddleware from 'redux-thunk'
-import initialState from './state2'
+//import initialState from './state2'
 
-//const initialState = {}
+const initialState = {}
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

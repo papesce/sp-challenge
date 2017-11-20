@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Album tests renders correctly 1`] = `
+<li
+  className="MuiGridListTile-root-2 Album-tile-1"
+>
+  <div
+    className="MuiGridListTile-tile-3"
+  >
+    <img
+      alt="albumname"
+      src="text"
+    />
+    <div
+      className="MuiGridListTileBar-root-6 MuiGridListTileBar-rootBottom-7 MuiGridListTileBar-rootWithSubtitle-9"
+    >
+      <div
+        className="MuiGridListTileBar-titleWrap-10 MuiGridListTileBar-titleWrapActionRight-12"
+      >
+        <div
+          className="MuiGridListTileBar-title-13"
+        >
+          albumname
+        </div>
+        <div
+          className="MuiGridListTileBar-subtitle-14"
+        >
+          <span>
+            by: 
+            name
+          </span>
+        </div>
+      </div>
+      <div
+        className=""
+      >
+        <a
+          className="MuiButtonBase-root-26 MuiIconButton-root-17"
+          href="eurl"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+        >
+          <span
+            className="MuiIconButton-label-23"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-28 MuiIconButton-icon-24"
+              color="rgba(255, 255, 255, 0.54)"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+              />
+            </svg>
+          </span>
+          <span
+            className="MuiTouchRipple-root-29"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</li>
+`;

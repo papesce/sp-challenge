@@ -12,7 +12,6 @@ const TopAppBar = () => {
           <Typography type="title" color="inherit">
             Spotify Challenge
           </Typography>
-         
         </Toolbar>
       </AppBar>
     </div>

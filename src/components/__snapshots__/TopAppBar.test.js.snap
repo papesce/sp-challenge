@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar tests renders correctly 1`] = `
+<div>
+  <header
+    className="MuiPaper-root-8 MuiPaper-shadow4-14 MuiAppBar-root-1 MuiAppBar-positionStatic-4 MuiAppBar-colorPrimary-6"
+  >
+    <div
+      className="MuiToolbar-root-35 MuiToolbar-gutters-36"
+    >
+      <h2
+        className="MuiTypography-root-37 MuiTypography-title-43 MuiTypography-colorInherit-56"
+      >
+        Spotify Challenge
+      </h2>
+    </div>
+  </header>
+</div>
+`;

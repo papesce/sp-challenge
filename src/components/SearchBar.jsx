@@ -51,4 +51,6 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(undefined, mapDispatchToProps)(withStyles(styles)(SearchBar))
+export const SearchBarS = withStyles(styles)(SearchBar)
+
+export default connect(undefined, mapDispatchToProps)(SearchBarS)

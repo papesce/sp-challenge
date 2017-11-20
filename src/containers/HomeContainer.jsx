@@ -5,7 +5,7 @@ import { Redirect } from 'react-router-dom';
 import { getToken, getAlbums } from '../redux/selectors';
 
 
-class HomeContainer extends Component {
+export class HomeContainer extends Component {
     
     render() {
         const {isAuth, albums} = this.props;

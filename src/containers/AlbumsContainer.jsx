@@ -24,7 +24,6 @@ export class AlbumsContainer extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    debugger;
     return {
          albums: getAlbums(state)
     }
