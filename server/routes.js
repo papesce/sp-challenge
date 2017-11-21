@@ -36,36 +36,36 @@ const spotifyApi = new Spotify({
 const scopes = ["user-read-private", "user-read-email"];
 
 
-router.get("/login/:auth_token/:refresh_token/:expiration", function(_, res) {
-  res.sendFile(APP_PATH );
-});
+//router.get("/login/:auth_token/:refresh_token/:expiration", function(_, res) {
+//  res.sendFile(APP_PATH );
+//});
 
-router.get("/login", function(_, response) {
-  response.sendFile(APP_PATH);
-});
+//router.get("/login", function(_, response) {
+//  response.sendFile(APP_PATH);
+//});
 /** Generates a random string containing numbers and letters of N characters */
-const generateRandomString = N =>
-  (Math.random().toString(36) + Array(N).join("0")).slice(2, N + 2);
+//const generateRandomString = N =>
+//  (Math.random().toString(36) + Array(N).join("0")).slice(2, N + 2);
 
-router.get("/serverlogin", (_, res) => {
-  const state = generateRandomString(16);
-  res.cookie(STATE_KEY, state);
-  res.redirect(spotifyApi.createAuthorizeURL(scopes, state));
-});
+//router.get("/serverlogin", (_, res) => {
+//  const state = generateRandomString(16);
+//  res.cookie(STATE_KEY, state);
+//  res.redirect(spotifyApi.createAuthorizeURL(scopes, state));
+//});
 
-router.get("/callback", (req, res) => {
-  const { code } = req.query;
+//router.get("/callback", (req, res) => {
+//  const { code } = req.query;
   //const storedState = req.cookies ? req.cookies[STATE_KEY] : null;
-  spotifyApi
-    .authorizationCodeGrant(code)
-    .then(data => {
-      const { expires_in, access_token, refresh_token } = data.body;
-      res.redirect(`/login/${access_token}/${refresh_token}/${expires_in}`);
-    })
-    .catch(err => {
-      res.redirect("/error");
-    });
-});
+//   spotifyApi
+//     .authorizationCodeGrant(code)
+//     .then(data => {
+//       const { expires_in, access_token, refresh_token } = data.body;
+//       res.redirect(`/login/${access_token}/${refresh_token}/${expires_in}`);
+//     })
+//     .catch(err => {
+//       res.redirect("/error");
+//     });
+// });
 
 router.get('/*', function(req, res){
   res.sendFile(APP_PATH);
