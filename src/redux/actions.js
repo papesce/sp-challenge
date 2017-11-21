@@ -1,8 +1,9 @@
 import {LOGIN_SUCCESS, LOGIN_FAILURE} from './actionTypes'
 import {SEARCH, SEARCH_CLEAR} from './actionTypes'
+import {RECOMMENDATIONS} from './actionTypes'
 import {createAction} from "redux-actions"
 import {createActionThunk} from "redux-thunk-actions"
-import {apiSearch} from "../spotify-api/api"
+import {apiSearch, apiRecommendations} from "../spotify-api/api"
 
 
 /**
@@ -29,3 +30,11 @@ export function loginFailure(error) {
 export const search = createActionThunk(SEARCH, apiSearch) ;
 
 export const searchClear = createAction(SEARCH_CLEAR)
+
+
+/**
+ * RECOMMENDATIONS ACTIONS
+ */
+
+export const recommendations = createActionThunk(RECOMMENDATIONS, apiRecommendations)
+

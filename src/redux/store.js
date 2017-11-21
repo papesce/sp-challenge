@@ -4,8 +4,8 @@ import { history } from "../router/Router";
 import { createLogger } from "redux-logger";
 import { loginReducer, searchReducer } from "./reducers";
 import thunkMiddleware from 'redux-thunk'
+import { middleware, initializeState } from './middleware'
 //import initialState from './state2'
-
 const initialState = {}
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -20,8 +20,8 @@ export const storeFactory = initialState =>
       user: loginReducer,
       router: routerReducer
     }),
-    initialState,
-    composeEnhancers(applyMiddleware(thunkMiddleware, routerMiddleware(history), createLogger()))
+    initializeState(initialState),
+    composeEnhancers(applyMiddleware(thunkMiddleware, middleware, routerMiddleware(history), createLogger()))
   );
 
   export const store = storeFactory(initialState);

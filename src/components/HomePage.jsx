@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import TopAppBar from "./TopAppBar";
 import SearchBar from './SearchBar';
-import { AlbumsContainer } from "../containers/AlbumsContainer";
+import AlbumsContainer from "../containers/AlbumsContainer";
 import { withStyles } from 'material-ui/styles';
 
 const styles = theme => ({
@@ -19,12 +19,12 @@ const styles = theme => ({
 
 export class HomePage extends Component {
   render() {
-    const {classes, albums} = this.props;
+    const {classes} = this.props;
     return (
       <div className={classes.container}>
         <TopAppBar />
         <SearchBar />
-        <AlbumsContainer albums={albums} />
+        <AlbumsContainer />
       </div>
     );
   }

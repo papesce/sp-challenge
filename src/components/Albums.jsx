@@ -21,7 +21,7 @@ const styles = theme => ({
 
 export class Albums extends Component {
   render() {
-     const {classes, albums} = this.props;  
+     const {classes, albums, handleClick} = this.props;  
     return (
       <div className={classes.container}>    
        <GridList cellHeight={180} className={classes.gridList}>
@@ -29,7 +29,7 @@ export class Albums extends Component {
           <Subheader component="div">Albums</Subheader>
         </GridListTile>
         {albums && albums.items && albums.items.map((album, index) => (
-            <Album key={index} album={album}/>
+            <Album key={index} album={album} handleClick={handleClick}/>
         ))}
       </GridList>
       </div>

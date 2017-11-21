@@ -7,7 +7,6 @@ import { Route, Switch } from "react-router";
 import HomeContainer from "../containers/HomeContainer";
 import LoginContainer from "../containers/LoginContainer";
 import RouteErrorComponent from "../components/RouteErrorComponent";
-import TokenContainer from './TokenContainer';
 
 // Create a history of your choosing (we're using a browser history in this case)
 export const history = createHistory();

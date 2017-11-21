@@ -40,6 +40,8 @@ export const url = getLoginURL([
     'user-follow-modify'
 ]);
 
+export const publicurl = getLoginURL([]);
+
 export const decodeHash = function(locationhash) {
 	var hash = {};
 	locationhash.replace(/^#\/?/, '').split('&').forEach(function(kv) {
@@ -49,7 +51,8 @@ export const decodeHash = function(locationhash) {
 		}
 	});
 
-	//console.log('initial hash', hash);
+    //console.log('initial hash', hash);
+    hash.expirationTime = new Date().getTime() + Number(hash.expires_in) * 1000 ;
     return hash;
 
 }

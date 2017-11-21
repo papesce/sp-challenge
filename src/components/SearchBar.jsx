@@ -16,10 +16,20 @@ const styles = theme => ({
 export class SearchBar extends Component {
   constructor(props) {
     super(props)
+    this.state = {}
     this.handleTextChanged = this.handleTextChanged.bind(this);
+    this.dispatchSearch = this.dispatchSearch.bind(this);
   }
   handleTextChanged(event) {
     const text = event.target.value;
+    if (this.state.typingTimeout) {
+        clearTimeout(this.state.typingTimeout);
+    } 
+    this.setState({
+        typingTimeout: setTimeout(() => this.dispatchSearch(text), 500)
+    })
+  }
+  dispatchSearch(text) {
     if (text.trim() === "")
       this.props.clear();  
     else {
