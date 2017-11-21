@@ -15,11 +15,10 @@ export const history = createHistory();
 export const Router = () => (
   <ConnectedRouter history={history}>
     <Switch>
-      <Route exact path="/" component={HomeContainer} />
-      <Route path="/callback" component={LoginContainer} />
-      <Route path="/login" component={LoginContainer} />
-      
-      {/* <Route component={RouteErrorComponent} /> */}
+      <Route exact path={process.env.PUBLIC_URL + '/'} component={HomeContainer} />
+      <Route path={process.env.PUBLIC_URL + '/callback'} component={LoginContainer} />
+      <Route path={process.env.PUBLIC_URL + '/login'} component={LoginContainer} /> 
+      <Route component={RouteErrorComponent} />
     </Switch>
   </ConnectedRouter>
 );

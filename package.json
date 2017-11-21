@@ -2,6 +2,7 @@
   "name": "spotify-challenge",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://papesce.github.io/sp-challenge",
   "dependencies": {
     "enzyme": "3.2.0",
     "enzyme-adapter-react-16": "1.1.0",
@@ -31,11 +32,14 @@
     "test": "react-scripts test --env=jsdom",
     "flow": "flow",
     "heroku-postbuild": "npm install && npm install --only=dev --no-shrinkwrap && npm run build",
-    "server": "npm run build && node server/server.js"
+    "server": "npm run build && node server/server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "eslint": "4.11.0",
     "eslint-config-prettier": "2.7.0",
+    "gh-pages": "1.1.0",
     "prettier": "1.8.2",
     "redux-devtools": "3.4.1",
     "spotify-web-api-node": "2.5.0"

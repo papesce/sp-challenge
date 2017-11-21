@@ -12,6 +12,11 @@ https://github.com/auth0-blog/redux-auth/blob/master/README.md
 
 For the routing process it was used:
 
-rou
 
-THe routing is in the App.js file
+
+The routing is in the App.js file
+
+
+## Links to issues found:
+
+[issues deploying to github.io](https://github.com/facebookincubator/create-react-app/issues/1765)

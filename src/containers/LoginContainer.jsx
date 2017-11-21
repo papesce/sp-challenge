@@ -11,7 +11,8 @@ export class LoginContainer extends Component {
     componentDidMount(){
         debugger;
         const {location } = this.props;
-        if (location.pathname === "/callback") {
+        console.log("login container" + location.pathname)
+        if (location.pathname.endsWith("/callback")) {
             const hash = decodeHash(location.hash) 
             this.props.setToken(hash.access_token, hash.access_token, hash.expires_in);
           }
@@ -19,7 +20,7 @@ export class LoginContainer extends Component {
     render () {
         const {isAuth, isLoading} = this.props;
         if (isAuth) {
-            return <Redirect to="/" />; 
+            return <Redirect to={process.env.PUBLIC_URL + '/'} />; 
         }
         if (isLoading) {
             return <LoadingUserPage />;
@@ -43,7 +44,7 @@ const mapStateToProps = (state, ownProps) => {
     //debugger;
     return {
       isAuth : (state.user.auth_token !== undefined),
-      isLoading: (ownProps.location.pathname === "/callback")
+      isLoading: (ownProps.location.pathname.endsWith("/callback")) 
     }
   }
   

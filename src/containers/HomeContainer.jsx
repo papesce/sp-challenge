@@ -9,7 +9,8 @@ export class HomeContainer extends Component {
     
     render() {
         const {isAuth, albums} = this.props;
-        if (!isAuth)  return <Redirect to="/login" />;  
+        console.log("home container:", process.env.PUBLIC_URL);
+        if (!isAuth)  return <Redirect to={process.env.PUBLIC_URL + '/login'} />;  
         return (<div>
                <HomePage albums={albums}/>
         </div>)

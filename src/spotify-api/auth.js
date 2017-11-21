@@ -2,14 +2,16 @@
 var CLIENT_ID = '';
 var REDIRECT_URI = '';
 
-let deploy = '1';
+//let deploy = 'localhost';
+//let deploy = 'heroku';
+let deploy = 'github.io';
 
-if (deploy === '1') {
+if (deploy === 'heroku') {
     CLIENT_ID = "ea8767bb8c8e4d918d361ef8f0ed226f";
     REDIRECT_URI = 'https://papesce-spotify-challenge.herokuapp.com/callback';
-} else if (deploy === '2') {
-    CLIENT_ID = "ea8767bb8c8e4d918d361ef8f0ed226f";
-    REDIRECT_URI = 'https://github.io/lenge.herokuapp.com';
+} else if (deploy === 'github.io') {
+    CLIENT_ID = "aebf92e9410e430b8fa311baa08bcb5a";
+    REDIRECT_URI = 'https://papesce.github.io/sp-challenge/callback';
 } else { 
     CLIENT_ID =	'844625938f10463086a5418f6eb5f1a1';
     REDIRECT_URI = 'http://localhost:3000/callback';

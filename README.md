@@ -78,7 +78,7 @@ Run the application against http://localhost:3000
 
 ## Live demo
 
-https://papesce-spotify-challenge.herokuapp.com/login
+https://papesce-spotify-challenge.herokuapp.com/
 
 
 ## Running Tests

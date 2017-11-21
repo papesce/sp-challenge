@@ -8,8 +8,7 @@ export default class RouteErrorComponent extends Component {
     render() {
     return (
       <div>
-        <p>Error in route</p>
-         <Redirect to="/serverlogin2"/>
+        <p>Error in route {JSON.stringify(this.props)}</p>
       </div>
     )
   }
