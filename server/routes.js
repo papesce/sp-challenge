@@ -24,7 +24,7 @@ if (useLocal) {
 }
 
 
-  const REDIRECT_URI = process.env.redirect_uri || `${HOST}/callback`;
+const REDIRECT_URI = process.env.redirect_uri || `${HOST}/callback`;
 const STATE_KEY = "spotify_auth_state";
 // configure spotify
 const spotifyApi = new Spotify({
