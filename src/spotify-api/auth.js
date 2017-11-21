@@ -2,7 +2,7 @@
 var CLIENT_ID = '';
 var REDIRECT_URI = '';
 
-let deploy = '3';
+let deploy = '1';
 
 if (deploy === '1') {
     CLIENT_ID = "ea8767bb8c8e4d918d361ef8f0ed226f";
