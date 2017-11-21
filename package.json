@@ -2,7 +2,6 @@
   "name": "spotify-challenge",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://papesce.github.io/sp-challenge",
   "dependencies": {
     "enzyme": "3.2.0",
     "enzyme-adapter-react-16": "1.1.0",
