@@ -52,6 +52,10 @@ npm install --save redux-thunk
 [Spotify web API](https://github.com/JMPerez/spotify-web-api-js)
 npm install --save spotify-web-api-js
 
+
+npm install --save-dev redux-devtools
+
+
 ## Server side approach to authenticate users:
 
 

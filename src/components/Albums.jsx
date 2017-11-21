@@ -3,7 +3,6 @@ import Album from './Album'
 import { GridList, GridListTile } from 'material-ui/GridList';
 import { withStyles } from 'material-ui/styles';
 import Subheader from 'material-ui/List/ListSubheader';
-import Progress from './Progress';
 
 
 const styles = theme => ({

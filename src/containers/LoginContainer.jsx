@@ -4,15 +4,17 @@ import LoadingUserPage from '../components/LoadingUserPage'
 import { Redirect } from 'react-router-dom';
 import {connect}  from 'react-redux'
 import {loginSuccess} from '../redux/actions'
+import {url, decodeHash} from '../spotify-api/auth'
+
 
 export class LoginContainer extends Component {
     componentDidMount(){
-        if (this.props.match) {
-          const {auth_token, refresh_token, expiration} = this.props.match.params;
-          if (auth_token) {
-            this.props.setToken(auth_token, refresh_token, expiration);
+        debugger;
+        const {location } = this.props;
+        if (location.pathname === "/callback") {
+            const hash = decodeHash(location.hash) 
+            this.props.setToken(hash.access_token, hash.access_token, hash.expires_in);
           }
-        }
     }
     render () {
         const {isAuth, isLoading} = this.props;
@@ -24,7 +26,7 @@ export class LoginContainer extends Component {
         } 
        
         return (
-            <LoginPage login_url="/serverlogin"/>
+            <LoginPage login_url={url}/>
         )
     }
 }
@@ -41,7 +43,7 @@ const mapStateToProps = (state, ownProps) => {
     //debugger;
     return {
       isAuth : (state.user.auth_token !== undefined),
-      isLoading: (ownProps.match.params.auth_token !== undefined)
+      isLoading: (ownProps.location.pathname === "/callback")
     }
   }
   
