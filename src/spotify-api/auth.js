@@ -2,9 +2,9 @@
 var CLIENT_ID = '';
 var REDIRECT_URI = '';
 
-//let deploy = 'localhost';
+let deploy = 'localhost';
 //let deploy = 'heroku';
-let deploy = 'heroku-dev';
+//let deploy = 'heroku-dev';
 
 if (deploy === 'heroku') {
     CLIENT_ID = "ea8767bb8c8e4d918d361ef8f0ed226f";
