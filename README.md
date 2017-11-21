@@ -1,7 +1,7 @@
 # sp-challenge
 Coding challenge
 
-
+(This documentation is not ready yet)
 
 ## Folder Structure
 
@@ -70,12 +70,15 @@ See the section about [deployment](#deployment) for more information.
 Run the application against http://localhost:3000
 
 
-# Documentation 
+## Documentation 
+
+- [Implementation Details](docs/IMPLEMENTATION.md)
+- [Documentation](docs/DOCUMENTATION.md)
 
 
-# Live demo
+## Live demo
 
-
+https://papesce-spotify-challenge.herokuapp.com/login
 
 
 ## Running Tests
