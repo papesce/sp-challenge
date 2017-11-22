@@ -28,7 +28,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "CI=true react-scripts test --env=jsdom",
     "flow": "flow",
     "heroku-postbuild":
       "npm install && npm install --only=dev --no-shrinkwrap && npm run build",
@@ -42,9 +42,10 @@
   },
   "devDependencies": {
     "eslint": "4.11.0",
-    "eslint-config-prettier": "2.7.0",
+    "eslint-config-prettier": "2.8.0",
     "gh-pages": "1.1.0",
     "husky": "0.14.3",
+    "jest-localstorage-mock": "2.1.0",
     "lint-staged": "5.0.0",
     "prettier": "1.8.2",
     "redux-devtools": "3.4.1",

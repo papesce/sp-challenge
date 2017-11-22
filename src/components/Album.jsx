@@ -15,7 +15,6 @@ const styles = theme => ({
 export class Album extends Component {
   render() {
     const { classes, album, handleClick } = this.props;
-    //debugger;
     return (
       <GridListTile className={classes.tile} key={album.id}>
         <img
@@ -35,9 +34,6 @@ export class Album extends Component {
               <IconButton onClick={() => handleClick(album)}>
                 <InfoIcon color="rgba(255, 255, 255, 0.54)" />
               </IconButton>
-              {/* <IconButton onClick={() => handleClick(album.id)} >
-                  <ZoomInIcon color="rgba(255, 255, 255, 0.54)"/>
-                </IconButton> */}
             </div>
           }
         />
