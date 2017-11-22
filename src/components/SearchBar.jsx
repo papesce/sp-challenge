@@ -3,6 +3,7 @@ import TextField from "material-ui/TextField";
 import { connect } from "react-redux";
 import { search, searchClear } from "../redux/actions";
 import { withStyles } from "material-ui/styles";
+import { getSearchText } from "../redux/selectors";
 
 const styles = theme => ({
   bar: {
@@ -39,7 +40,7 @@ export class SearchBar extends Component {
     //debugger;
   }
   render() {
-    const { classes } = this.props;
+    const { classes, searchText } = this.props;
     return (
       <TextField
         className={classes.bar}
@@ -47,6 +48,7 @@ export class SearchBar extends Component {
         autoFocus
         label="Enter text to search"
         type="search"
+        defaultValue={searchText}
         //npm className={classes.textField}
         margin="normal"
         onChange={this.handleTextChanged}
@@ -62,6 +64,12 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
+const mapStateToProps = state => {
+  return {
+    searchText: getSearchText(state)
+  };
+};
+
 export const SearchBarS = withStyles(styles)(SearchBar);
 
-export default connect(undefined, mapDispatchToProps)(SearchBarS);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBarS);

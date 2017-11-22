@@ -20,11 +20,11 @@ export class AlbumsContainer extends Component {
   render() {
     const { albums } = this.props;
     if (albums) {
-      if (albums.items) {
+      if (albums.result && albums.result.items) {
         return (
           <Albums
             title={"Albums"}
-            albums={albums.items}
+            albums={albums.result.items}
             handleClick={this.handleAlbumClick}
           />
         );

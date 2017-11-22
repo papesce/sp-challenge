@@ -30,11 +30,21 @@ export function loginReducer(prevState = {}, action) {
 export function searchReducer(prevState = {}, action) {
   switch (action.type) {
     case SEARCH_SUCCEEDED:
-      return { albums: action.payload.albums };
+      return {
+        albums: {
+          searchText: prevState.albums.searchText,
+          result: action.payload.albums
+        }
+      };
     case SEARCH_FAILED:
       return { albums: JSON.parse(action.payload.response) };
     case SEARCH_STARTED:
-      return { albums: { loading: true } };
+      return {
+        albums: {
+          searchText: action.payload[0],
+          loading: true
+        }
+      };
     case SEARCH_CLEAR:
       return { albums: {} };
     default:
@@ -48,12 +58,13 @@ export function searchReducer(prevState = {}, action) {
 export function recommendationsReducer(prevState = {}, action) {
   switch (action.type) {
     case RECOMMENDATIONS_SUCCEEDED:
-      debugger;
-      return { results: action.payload };
+      return { album: prevState.album, results: action.payload };
     case RECOMMENDATIONS_FAILED:
       return { results: JSON.parse(action.payload.response) };
     case RECOMMENDATIONS_STARTED:
-      return { loading: true };
+      return { album: action.payload[0].album, loading: true };
+    case SEARCH_CLEAR:
+      return {};
     default:
   }
   return prevState;

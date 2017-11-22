@@ -52,10 +52,14 @@ npm install --save redux-thunk
 [Spotify web API](https://github.com/JMPerez/spotify-web-api-js)
 npm install --save spotify-web-api-js
 
+[Redux-persist](https://medium.com/@clrksanford/persist-ence-is-key-using-redux-persist-to-store-your-state-in-localstorage-ac6a000aee63)
+npm install -save redux-persist
+
 
 npm install lint-staged husky --save-dev
 
 npm install --save-dev redux-devtools
+
 
 
 ## Server side approach to authenticate users:

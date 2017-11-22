@@ -42,7 +42,7 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    isAuth: isAuth(state.user),
+    isAuth: isAuth(state),
     isLoading: isCallback(ownProps.location)
   };
 };

@@ -6,3 +6,9 @@ export const getAlbums = state => {
 };
 
 export const getRecommendations = state => state.recommendations;
+
+export const getSearchText = state => {
+  return state.search && state.search.albums && state.search.albums.searchText
+    ? state.search.albums.searchText
+    : "";
+};

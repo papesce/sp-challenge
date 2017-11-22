@@ -11,7 +11,10 @@ import thunkMiddleware from "redux-thunk";
 import { middleware, initializeState } from "./middleware";
 //import initialState from './state2'
 //import initialState from "./results/recomendations";
-const initialState = {};
+
+const initialState = localStorage["redux-store"]
+  ? JSON.parse(localStorage["redux-store"])
+  : {};
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -37,4 +40,10 @@ export const storeFactory = initialState =>
     )
   );
 
-export const store = storeFactory(initialState);
+const theStore = storeFactory(initialState);
+
+theStore.subscribe(() => {
+  localStorage["redux-store"] = JSON.stringify(store.getState());
+});
+
+export const store = theStore;
