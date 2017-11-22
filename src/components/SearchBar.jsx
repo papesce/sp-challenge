@@ -7,10 +7,10 @@ import { getSearchText } from "../redux/selectors";
 
 const styles = theme => ({
   bar: {
-    marginLeft: 5 * theme.spacing.unit,
-    marginRight: 5 * theme.spacing.unit,
-    marginTop: 4 * theme.spacing.unit,
-    width: "90%"
+    marginLeft: 3 * theme.spacing.unit,
+    marginRight: 3 * theme.spacing.unit,
+    marginTop: 4 * theme.spacing.unit
+    //width: "90%"
   }
 });
 

@@ -8,13 +8,14 @@ const styles = theme => ({
   container: {
     flex: "1",
     display: "flex",
-    paddingLeft: 5 * theme.spacing.unit,
-    paddingRight: 5 * theme.spacing.unit,
+    paddingLeft: 1 * theme.spacing.unit,
+    paddingRight: 1 * theme.spacing.unit,
     overflow: "hidden"
     //background: theme.palette.background.paper,
   },
   gridList: {
-    width: "100%"
+    width: "100%",
+    justifyContent: "space-around"
   }
 });
 
