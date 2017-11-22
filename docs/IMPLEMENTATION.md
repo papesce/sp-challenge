@@ -53,6 +53,8 @@ npm install --save redux-thunk
 npm install --save spotify-web-api-js
 
 
+npm install lint-staged husky --save-dev
+
 npm install --save-dev redux-devtools
 
 

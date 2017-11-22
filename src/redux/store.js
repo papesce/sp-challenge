@@ -10,8 +10,8 @@ import {
 import thunkMiddleware from "redux-thunk";
 import { middleware, initializeState } from "./middleware";
 //import initialState from './state2'
-import initialState from "./results/recomendations";
-//const initialState = {}
+//import initialState from "./results/recomendations";
+const initialState = {};
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

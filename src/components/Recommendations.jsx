@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-import TopAppBar from "./TopAppBar";
+import Albums from "./Albums";
 
 export default class Recommendations extends Component {
   render() {
-    return (
-      <div>
-        <TopAppBar />
-        <p>{JSON.stringify(this.props)}</p>
-      </div>
-    );
+    const { tracks = [] } = this.props;
+    return <Albums title="Recommendations" albums={tracks.map(a => a.album)} />;
   }
 }

@@ -1,44 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SearchBar tests renders correctly 1`] = `
-<div>
+<div
+  className="MuiFormControl-root-2 MuiFormControl-marginNormal-3 SearchBar-bar-1"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  required={false}
+>
+  <label
+    className="MuiFormLabel-root-12 MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
+    data-shrink={false}
+    htmlFor="search"
+  >
+    Enter text to search
+  </label>
   <div
-    className="MuiFormControl-root-2 MuiFormControl-marginNormal-3 SearchBar-bar-1"
+    className="MuiInput-root-16 MuiInput-formControl-17 MuiInput-inkbar-18 MuiInput-underline-24"
     onBlur={[Function]}
     onFocus={[Function]}
-    required={false}
   >
-    <label
-      className="MuiFormLabel-root-12 MuiInputLabel-root-6 MuiInputLabel-formControl-7 MuiInputLabel-animated-10"
-      data-shrink={false}
-      htmlFor="search"
-    >
-      Enter text to search
-    </label>
-    <div
-      className="MuiInput-root-16 MuiInput-formControl-17 MuiInput-inkbar-18 MuiInput-underline-24"
-      onBlur={[Function]}
-      onFocus={[Function]}
-    >
-      <input
-        autoComplete={undefined}
-        autoFocus={undefined}
-        className="MuiInput-input-20 MuiInput-inputSingleline-27 MuiInput-inputSearch-28"
-        defaultValue={undefined}
-        disabled={false}
-        id="search"
-        name={undefined}
-        onChange={[Function]}
-        onKeyDown={undefined}
-        onKeyUp={undefined}
-        placeholder={undefined}
-        readOnly={undefined}
-        required={undefined}
-        rows={undefined}
-        type="search"
-        value={undefined}
-      />
-    </div>
+    <input
+      autoComplete={undefined}
+      autoFocus={true}
+      className="MuiInput-input-20 MuiInput-inputSingleline-27 MuiInput-inputSearch-28"
+      defaultValue={undefined}
+      disabled={false}
+      id="search"
+      name={undefined}
+      onChange={[Function]}
+      onKeyDown={undefined}
+      onKeyUp={undefined}
+      placeholder={undefined}
+      readOnly={undefined}
+      required={undefined}
+      rows={undefined}
+      type="search"
+      value={undefined}
+    />
   </div>
 </div>
 `;

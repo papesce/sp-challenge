@@ -48,11 +48,12 @@ export function searchReducer(prevState = {}, action) {
 export function recommendationsReducer(prevState = {}, action) {
   switch (action.type) {
     case RECOMMENDATIONS_SUCCEEDED:
-      return { recommendations: action.payload };
+      debugger;
+      return { results: action.payload };
     case RECOMMENDATIONS_FAILED:
-      return { reccomendations: JSON.parse(action.payload.response) };
+      return { results: JSON.parse(action.payload.response) };
     case RECOMMENDATIONS_STARTED:
-      return { recommendations: { loading: true } };
+      return { loading: true };
     default:
   }
   return prevState;

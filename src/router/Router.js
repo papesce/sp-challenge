@@ -7,7 +7,8 @@ import { Route, Switch } from "react-router";
 import HomeContainer from "../containers/HomeContainer";
 import LoginContainer from "../containers/LoginContainer";
 import RouteErrorComponent from "../components/RouteErrorComponent";
-import RecommendationsContainer from "../containers/RecommendationsContainer";
+import HomePage from "../components/HomePage";
+import RecommHomePage from "../components/RecommHomePage";
 
 // Create a history of your choosing (we're using a browser history in this case)
 export const history = createHistory();
@@ -18,7 +19,7 @@ export const Router = () => (
       <Route
         exact
         path={process.env.PUBLIC_URL + "/"}
-        component={HomeContainer}
+        component={HomeContainer(HomePage)}
       />
       <Route
         path={process.env.PUBLIC_URL + "/callback"}
@@ -29,8 +30,8 @@ export const Router = () => (
         component={LoginContainer}
       />
       <Route
-        path={process.env.PUBLIC_URL + "/recommendations"}
-        component={RecommendationsContainer}
+        path={process.env.PUBLIC_URL + "/recommendations/:albumid"}
+        component={HomeContainer(RecommHomePage)}
       />
       <Route component={RouteErrorComponent} />
     </Switch>
