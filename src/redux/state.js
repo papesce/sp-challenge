@@ -1,6 +1,5 @@
-
-
 export const state = {
-    user : {auth_token: "", refresh_token: "", expiration: ""},
-    search : {}
-}
+  user: { auth_token: "", refresh_token: "", expiration: "" },
+  search: {},
+  recommendations: {}
+};

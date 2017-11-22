@@ -2,11 +2,16 @@ import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import { routerReducer, routerMiddleware } from "react-router-redux";
 import { history } from "../router/Router";
 import { createLogger } from "redux-logger";
-import { loginReducer, searchReducer } from "./reducers";
-import thunkMiddleware from 'redux-thunk'
-import { middleware, initializeState } from './middleware'
+import {
+  loginReducer,
+  searchReducer,
+  recommendationsReducer
+} from "./reducers";
+import thunkMiddleware from "redux-thunk";
+import { middleware, initializeState } from "./middleware";
 //import initialState from './state2'
-const initialState = {}
+import initialState from "./results/recomendations";
+//const initialState = {}
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -17,11 +22,19 @@ export const storeFactory = initialState =>
     combineReducers({
       //...reducers,
       search: searchReducer,
+      recommendations: recommendationsReducer,
       user: loginReducer,
       router: routerReducer
     }),
     initializeState(initialState),
-    composeEnhancers(applyMiddleware(thunkMiddleware, middleware, routerMiddleware(history), createLogger()))
+    composeEnhancers(
+      applyMiddleware(
+        thunkMiddleware,
+        middleware,
+        routerMiddleware(history),
+        createLogger()
+      )
+    )
   );
 
-  export const store = storeFactory(initialState);
+export const store = storeFactory(initialState);

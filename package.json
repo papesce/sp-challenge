@@ -30,15 +30,22 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "flow": "flow",
-    "heroku-postbuild": "npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "heroku-postbuild":
+      "npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "server": "npm run build && node server/server.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,css}": ["prettier --write", "git add"]
   },
   "devDependencies": {
     "eslint": "4.11.0",
     "eslint-config-prettier": "2.7.0",
     "gh-pages": "1.1.0",
+    "husky": "0.14.3",
+    "lint-staged": "5.0.0",
     "prettier": "1.8.2",
     "redux-devtools": "3.4.1",
     "spotify-web-api-node": "2.5.0"
