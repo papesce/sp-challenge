@@ -4,7 +4,8 @@ var REDIRECT_URI = "";
 let deploy = "localhost";
 //let deploy = 'heroku-dev';
 if (process.env.NODE_ENV === "production") {
-  deploy = "heroku-dev";
+  deploy = "heroku";
+  //deploy = "heroku-dev";
 }
 
 if (deploy === "heroku") {
