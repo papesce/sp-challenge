@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import Progress from "../components/Progress";
 import { Redirect } from "react-router-dom";
 import { recommendations } from "../redux/actions";
-import { push } from "react-router-redux";
 
 export class RecommContainer extends Component {
   constructor(props) {

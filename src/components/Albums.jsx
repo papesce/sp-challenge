@@ -21,11 +21,12 @@ const styles = theme => ({
 export class Albums extends Component {
   render() {
     const { classes, albums, handleClick, title } = this.props;
+    let ntitle = albums.length === 0 ? "No " + title : title;
     return (
       <div className={classes.container}>
         <GridList cellHeight={180} className={classes.gridList}>
           <GridListTile key="Subheader" cols={2} style={{ height: "auto" }}>
-            <Subheader component="div">{title}</Subheader>
+            <Subheader component="div">{ntitle}</Subheader>
           </GridListTile>
           {albums &&
             albums.map((album, index) => (

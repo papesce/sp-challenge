@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
-import { getToken } from "../redux/selectors";
+import { isAuth } from "../redux/middleware";
 
 export const HomeContainer = AuthenticatedComponent =>
   class HomeContainer extends Component {
@@ -14,7 +14,7 @@ export const HomeContainer = AuthenticatedComponent =>
 
 const mapStateToProps = state => {
   return {
-    isAuth: getToken(state) !== undefined
+    isAuth: isAuth(state)
   };
 };
 
