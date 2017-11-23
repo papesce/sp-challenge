@@ -35,8 +35,9 @@ This component was implemented reusing several components of the previous develo
 
 ## Documentation 
 
-Detailed documentation will be available in this section
+Detailed documentation links will be available in this section
 
+- [Documentation](docs/DOCUMENTASTION.md) (in progess...)
 
 ## Installation
 
