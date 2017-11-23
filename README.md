@@ -40,7 +40,7 @@ Detailed documentation will be available in the following links
 - [Documentation](docs/DOCUMENTATION.md)
 - [Implementation Details](docs/IMPLEMENTATION.md)
 
-## Instalation
+## Installation
 
 To install and run locally the app you should execute the following commands
 
