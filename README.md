@@ -6,7 +6,7 @@ Coding challenge
 
 ## Live Demo
 
-You can test the latest demo running here:
+You can test the latest demo here:
 
 https://papesce-spotify-challenge.herokuapp.com/
 

@@ -19,7 +19,7 @@ The basic idea is to have a clear separation between:
 - State (handled by redux and stored in the redux folder) 
 - Spotify API interaction (handled in the spotify-api folder)
 - Routing (handled in the router folder)
-- Presenational Componenents (components that render UI using *material-ui*)
+- Presenational Components (components that render UI using *material-ui*)
 - Composite Components (Components that render UI using other components)
 - Container Components. (Components that interact with redux and provide state and actions to the inner components)
  
