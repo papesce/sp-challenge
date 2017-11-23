@@ -3,10 +3,10 @@ import createHistory from "history/createBrowserHistory";
 import { ConnectedRouter } from "react-router-redux";
 
 //import MyConnectedRouter from "./MyConnectedRouter";
-import { Route, Switch } from "react-router";
+import { Route, Switch, Redirect } from "react-router";
 import HomeContainer from "../containers/HomeContainer";
 import LoginContainer from "../containers/LoginContainer";
-import RouteErrorComponent from "../components/RouteErrorComponent";
+//import RouteErrorComponent from "../components/RouteErrorComponent";
 import HomePage from "../components/HomePage";
 import RecommHomePage from "../components/RecommHomePage";
 
@@ -33,7 +33,8 @@ export const Router = () => (
         path={process.env.PUBLIC_URL + "/recommendations/:albumid"}
         component={HomeContainer(RecommHomePage)}
       />
-      <Route component={RouteErrorComponent} />
+      {/* <Route component={RouteErrorComponent} /> */}
+      <Redirect to={process.env.PUBLIC_URL + "/"} />;
     </Switch>
   </ConnectedRouter>
 );

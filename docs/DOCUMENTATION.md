@@ -49,11 +49,18 @@ Later I've added a third User story:
 3. As a user I want to see similar recommendations for one of the results so I can discover similar artists
 
 
+### Routing
+
+For the routing process a new library was used (react-router-redux). It provides integration between the three populars packages and provides a way to keep the routing history in the store.
+
+3 routes were developed:
+
+
 ### Authentication to Spotify
 
-To be able to interact with the Spotify API it is required to obtain a token. For that reason it is necesary the UI that opens a login window to obtain the authentication token.
+To be able to interact with the Spotify API it is required to obtain a token. For that reason it is neccesary the UI that opens a login window to obtain the authentication token.
 
-
+THe flow here is very simple. 
 
 
 
