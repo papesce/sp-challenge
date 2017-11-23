@@ -7,7 +7,9 @@ export const HomeContainer = AuthenticatedComponent =>
   class HomeContainer extends Component {
     render() {
       const { isAuth } = this.props;
-      if (!isAuth) return <Redirect to={process.env.PUBLIC_URL + "/login"} />;
+      if (!isAuth) {
+        return <Redirect to={process.env.PUBLIC_URL + "/login"} />;
+      }
       return <AuthenticatedComponent {...this.state} {...this.props} />;
     }
   };

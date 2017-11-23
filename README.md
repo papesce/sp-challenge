@@ -1,40 +1,59 @@
-# sp-challenge
+# spotify-challenge
 Coding challenge
 
-(This documentation is not ready yet)
+## Objective:
+ Create a simple app that uses React and the Spotify API.
 
-## Folder Structure
+## Live Demo
 
+You can test the final demo running here:
+
+https://papesce-spotify-challenge.herokuapp.com/
+
+##Screenshots
+
+### Authentication Flow
+To interact with the spotify API is required an authentication token.  To obtain this token is necessary to follow several steps.  The process is described in detail [here](https://developer.spotify.com/web-api/authorization-guide/)
+
+To obtain the token I've used the React-Router capability
+
+![login.png](docs/auth_flow.png)
+
+### Search API
+
+The home page allow the user to search for albums. For each album there is an option to to search for recommendations based on the artist of the selected album. In this part the search API from spotify was used. Material-ui was used to speed up the implementation of each component. 
+
+![Search Home Page](docs/homepage.png)
+
+
+### Recommendations API
+
+For each album the user can use the little button in the bottom right corner to search for recommendations based on the artist of the album.
+This component was implemented reusing several components of the previous developed search components.
+
+![Recommnedations Page](docs/recommendations.png)
+
+## Documentation 
+
+Detailed documentation will be available in the following links
+
+- [Documentation](docs/DOCUMENTATION.md)
+- [Implementation Details](docs/IMPLEMENTATION.md)
+
+## Instalation
+
+To install and run locally the app you should execute the following commands
+
+```sh
+git clone https://github.com/papesce/sp-challenge.git
+
+cd sp-challenge/
+git checkout dev
+npm install
+
+npm start
 ```
-spotify-challenge/
-  README.md
-  node_modules/
-  package.json
-  public/
-    index.html
-    favicon.ico
-  src/
-    components/
-    containers/
-    redux/
-    router/
-    App.css
-    App.js
-    App.test.js
-    index.css
-    index.js
-    logo.svg
-  server/
-  docs/
-    
-```
-
-For the project to build, **these files must exist with exact filenames**:
-
-* `public/index.html` is the page template;
-* `src/index.js` is the JavaScript entry point.
-
-
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 
@@ -52,8 +71,8 @@ You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](#running-tests) for more information.
+Launches the test runner.<br>
+
 
 ### `npm run build`
 
@@ -61,24 +80,9 @@ Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](#deployment) for more information.
+This is the option used for automatic deployment on heroku (see "heroku-postbuild" option in package.json)
 
-### npm run server   
-
-Run the application against http://localhost:3000
-
-
-## Documentation 
-
-- [Implementation Details](docs/IMPLEMENTATION.md)
-- [Documentation](docs/DOCUMENTATION.md)
-
-
-## Live demo
-
-https://papesce-spotify-challenge.herokuapp.com/
 
 
 ## Running Tests
@@ -107,4 +111,4 @@ When you run `npm test`, Jest will launch in the watch mode. Every time you save
 Jest has an integrated coverage reporter that works well with ES6 and requires no configuration.<br>
 Run `npm test -- --coverage` (note extra `--` in the middle) to include a coverage report like this:
 
-Note that tests run much slower with coverage so it is recommended to run it separately from your normal workflow.
+Note that tests run much slower with coverage so it is recommended to run it separately from your normal workflow.Â
