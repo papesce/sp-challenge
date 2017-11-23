@@ -6,7 +6,7 @@ Coding challenge
 
 ## Live Demo
 
-You can test the final demo running here:
+You can test the latest demo running here:
 
 https://papesce-spotify-challenge.herokuapp.com/
 
@@ -75,3 +75,6 @@ This is the option used for automatic deployment to Heroku (see "heroku-postbuil
 
 Run the tests in the console.  The app uses [Jest](https://facebook.github.io/jest/) as its test runner. The tests are located next to the code they are testing so that relative imports appear shorter.
 
+### License
+
+sp-challenge app is [MIT licensed](./LICENSE).

@@ -1,5 +1,7 @@
 ## Commands used to setup the project
 
+This project was bootstrapped with Create React App.
+
 create-react-app sp-challenge ([create-react-app doc](/docs/CREATE_REACT_APP.md)) ([remote](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md))
 
 [ESlint]()
