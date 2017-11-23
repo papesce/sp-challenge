@@ -10,7 +10,7 @@ You can test the final demo running here:
 
 https://papesce-spotify-challenge.herokuapp.com/
 
-##Screenshots
+## Screenshots
 
 ### Authentication Flow
 To interact with the spotify API is required an authentication token.  To obtain this token is necessary to follow several steps.  The process is described in detail [here](https://developer.spotify.com/web-api/authorization-guide/)
