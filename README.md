@@ -61,54 +61,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#### `npm run build`
 
-### `npm test`
+Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.<br>
 
-Launches the test runner.<br>
+This is the option used for automatic deployment to Heroku (see "heroku-postbuild" option in package.json)
 
+#### `npm test`
 
-### `npm run build`
+Run the tests in the console.  The app uses [Jest](https://facebook.github.io/jest/) as its test runner. The tests are located next to the code they are testing so that relative imports appear shorter.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-
-This is the option used for automatic deployment on heroku (see "heroku-postbuild" option in package.json)
-
-
-
-## Running Tests
-
-### Filename Conventions
-
-Create React App uses [Jest](https://facebook.github.io/jest/) as its test runner.
-
-Jest will look for test files with any of the following popular naming conventions:
-
-* Files with `.js` suffix in `__tests__` folders.
-* Files with `.test.js` suffix.
-* Files with `.spec.js` suffix.
-
-The `.test.js` / `.spec.js` files (or the `__tests__` folders) can be located at any depth under the `src` top level folder.
-
-We recommend to put the test files (or `__tests__` folders) next to the code they are testing so that relative imports appear shorter. For example, if `App.test.js` and `App.js` are in the same folder, the test just needs to `import App from './App'` instead of a long relative path. Colocation also helps find tests more quickly in larger projects.
-
-### Command Line Interface
-
-When you run `npm test`, Jest will launch in the watch mode. Every time you save a file, it will re-run the tests, just like `npm start` recompiles the code.
-
-
-### Coverage Reporting
-
-Jest has an integrated coverage reporter that works well with ES6 and requires no configuration.<br>
-Run `npm test -- --coverage` (note extra `--` in the middle) to include a coverage report like this:
-
-Note that tests run much slower with coverage so it is recommended to run it separately from your normal workflow.Â
