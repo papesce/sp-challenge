@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { loginSuccess } from "../redux/actions";
 import { publicurl, decodeHash } from "../spotify-api/auth";
 import { isAuth } from "../redux/middleware";
+import TemplatePage from "../components/TemplatePage";
 
 export class LoginContainer extends Component {
   componentDidMount() {

@@ -57,3 +57,9 @@ npm install --save spotify-web-api-js
 
 [Redux Dev-tools](https://github.com/gaearon/redux-devtools)
 npm install --save-dev redux-devtools
+
+[Storybook](https://github.com/storybooks/storybook)
+npm install -g @storybook/cli
+getstorybook
+
+

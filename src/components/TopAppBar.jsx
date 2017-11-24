@@ -3,7 +3,7 @@ import AppBar from "material-ui/AppBar";
 import Toolbar from "material-ui/Toolbar";
 import Typography from "material-ui/Typography";
 
-const TopAppBar = ({ children }) => {
+const TopAppBar = () => {
   return (
     <AppBar position="static">
       <Toolbar>

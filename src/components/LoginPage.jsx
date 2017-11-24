@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import TopAppBar from "./TopAppBar";
 import Card, { CardActions, CardContent, CardMedia } from "material-ui/Card";
 import Button from "material-ui/Button";
 import Typography from "material-ui/Typography";
