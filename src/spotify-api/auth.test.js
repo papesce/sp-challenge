@@ -13,6 +13,7 @@ describe("auth tests", () => {
 
   it("should set clientID", () => {
     process.env.NODE_ENV = "production";
-    console.log(publicurl);
+    debugger;
+    //console.log(publicurl);
   });
 });

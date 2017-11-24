@@ -21,7 +21,7 @@ const styles = theme => ({
 
 export class Albums extends Component {
   render() {
-    const { classes, albums, handleClick, title } = this.props;
+    const { classes, albums = [], handleClick, title = "" } = this.props;
     let ntitle = albums.length === 0 ? "No " + title : title;
     return (
       <div className={classes.container}>

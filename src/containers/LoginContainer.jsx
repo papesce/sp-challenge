@@ -24,7 +24,11 @@ export class LoginContainer extends Component {
       return <LoadingUserPage />;
     }
 
-    return <LoginPage login_url={publicurl} />;
+    return (
+      <TemplatePage>
+        <LoginPage login_url={publicurl} />
+      </TemplatePage>
+    );
   }
 }
 

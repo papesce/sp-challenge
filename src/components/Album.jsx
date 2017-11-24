@@ -8,27 +8,31 @@ const styles = theme => ({
   tile: {
     margin: theme.spacing.unit,
     overflow: "hidden",
-    height: 300
+    height: 300,
+    width: 300
   }
 });
 
 export class Album extends Component {
   render() {
-    const { classes, album, handleClick } = this.props;
+    const { classes, album = {}, handleClick } = this.props;
     return (
       <GridListTile className={classes.tile} key={album.id}>
         <img
-          src={album.images[1].url}
+          src={album.images && album.images[1].url}
           alt={album.name}
-          href={album.external_urls.spotify}
+          //href={album.external_urls.spotify}
         />
         <GridListTileBar
           title={
-            <a style={{ color: "white" }} href={album.external_urls.spotify}>
+            <a
+              style={{ color: "white" }}
+              href={album.external_urls && album.external_urls.spotify}
+            >
               {album.name}
             </a>
           }
-          subtitle={<span>by: {album.artists[0].name}</span>}
+          subtitle={<span>by: {album.artists && album.artists[0].name}</span>}
           actionIcon={
             <div>
               <IconButton onClick={() => handleClick(album)}>

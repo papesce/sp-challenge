@@ -39,7 +39,6 @@ class LoginPage extends Component {
     const { classes, login_url } = this.props;
     return (
       <div>
-        <TopAppBar />
         <Card className={classes.card}>
           <CardMedia className={classes.cover} image={logo} title="" />
           <div className={classes.details}>
