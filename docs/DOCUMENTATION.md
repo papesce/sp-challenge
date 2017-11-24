@@ -53,15 +53,28 @@ Later I've added a third User story:
 
 For the routing process a new library was used (react-router-redux). It provides integration between the three populars packages and provides a way to keep the routing history in the store.
 
-3 routes were developed:
+ Four routes were developed:
+
+- `/`&nbsp;&nbsp;&nbsp;    Used to render the HomePage 
+- `/login`   used to render de LoginContainer 
+- `/callback`   used to get the callback info. Handled in the LoginContainer
+- `/recomendations/:albumid` used to render the Recommendations page base on the artist of the album (handled in the RecommHomePage)
+
+The `HomePage` and `RecommHomePage` are wrapped with a HOC called HomeContainer that is a function that takes a Component and return a new Component adding the Authentication and Token Expiration check.
+
 
 
 ### Authentication to Spotify
 
-To be able to interact with the Spotify API it is required to obtain a token. For that reason it is neccesary the UI that opens a login window to obtain the authentication token.
+To be able to interact with the Spotify API it is required to obtain a token. For that reason was neccesary to develop a UI that redirects to spotify url with a predefined CLIENT_ID.  If the user accepts the login then Spotify generates a redirection to the /callback route of the app.  This callback is handled in the LoginContainer. In this component the Redux action `loginSuccess` is dispatched setting the authentication info in the redux store.  A redirect to the `HomePage` completes the login cycle.
 
-THe flow here is very simple. 
+### Developing the UI with Material UI
+
+template
+
+### Calling the Search API
 
 
+### Calling the Recommendations API
 
 
