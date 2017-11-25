@@ -59,7 +59,7 @@ For the routing process a new library was used (react-router-redux). It provides
 - `/login`   used to render de LoginContainer 
 - `/callback`   used to get the callback info. Handled in the LoginContainer
 - `/recomendations/:albumid` used to render the Recommendations page base on the artist of the album (handled in the RecommHomePage)
-
+ 
 The `HomePage` and `RecommHomePage` are wrapped with a HOC called HomeContainer that is a function that takes a Component and return a new Component adding the Authentication and Token Expiration check.
 
 
@@ -70,7 +70,11 @@ To be able to interact with the Spotify API it is required to obtain a token. Fo
 
 ### Developing the UI with Material UI
 
-template
+There are plenty of alternatives to build the UI. I choose to use Material UI due to its popularity, the huge community of contributors and the modern style. 
+Material-ui has several  ready to use UI components for React.
+
+Use the following link to visualize the main componentes with a [Storyboard](../storybook-static/index.html).
+
 
 ### Calling the Search API
 
