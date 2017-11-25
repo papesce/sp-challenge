@@ -73,7 +73,7 @@ To be able to interact with the Spotify API it is required to obtain a token. Fo
 There are plenty of alternatives to build the UI. I choose to use Material UI due to its popularity, the huge community of contributors and the modern style. 
 Material-ui has several  ready to use UI components for React.
 
-Use the following link to visualize the main componentes with a [Storyboard](https://papesce.github.io/storybook/).
+Use the following link to visualize the main componentes with a [Storybook](https://papesce.github.io/storybook/).
 
 
 ### Calling the Search API
