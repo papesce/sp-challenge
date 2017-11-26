@@ -76,9 +76,12 @@ Material-ui has several  ready to use UI components for React.
 Use the following link to visualize the main componentes with a [Storybook](https://papesce.github.io/storybook/).
 
 
+
+
 ### Calling the Search API
+
 
 
 ### Calling the Recommendations API
 
-
+## Redux model

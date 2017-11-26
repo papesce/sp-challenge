@@ -63,3 +63,8 @@ npm install -g @storybook/cli
 getstorybook
 
 
+npm install redux-mock-store --save-dev
+
+
+Necessary to fix issues with tests
+brew install watchman

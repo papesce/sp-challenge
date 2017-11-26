@@ -12,9 +12,13 @@ import { middleware, initializeState } from "./middleware";
 //import initialState from './state2'
 //import initialState from "./results/recomendations";
 
-const initialState = localStorage["redux-store"]
-  ? JSON.parse(localStorage["redux-store"])
-  : {};
+export const getStateFromCache = () => {
+  let cachedState = localStorage["redux-store"];
+  if (cachedState) return JSON.parse(cachedState);
+  return {};
+};
+
+const initialState = getStateFromCache();
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
