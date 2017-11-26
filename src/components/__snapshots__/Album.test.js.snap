@@ -8,8 +8,7 @@ exports[`Album tests renders correctly 1`] = `
     className="MuiGridListTile-tile-3"
   >
     <img
-      alt="albumname"
-      href="eurl"
+      alt="album_name"
       src="text"
     />
     <div
@@ -29,7 +28,7 @@ exports[`Album tests renders correctly 1`] = `
               }
             }
           >
-            albumname
+            album_name
           </a>
         </div>
         <div
