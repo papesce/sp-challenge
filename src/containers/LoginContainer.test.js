@@ -22,30 +22,31 @@ function setup(bprops) {
 
 describe("LoginContainer tests", () => {
   it("renders without crashing", () => {
-    //shallow(<LoginContainer />);
+    const props = { location: { pathname: "home" } };
+    shallow(<LoginContainer {...props} />);
   });
 
   it("should render LoginPage", () => {
     const props = { isAuth: false, isLoading: false };
-    //const wrapper = shallow(<LoginContainer {...props}/>);
-    //expect(wrapper.find(LoginPage).length).toBe(1)
-    //expect(wrapper.find(LoadingUserPage).length).toBe(0)
-    //expect(wrapper.find(Redirect).length).toBe(0)
+    const wrapper = shallow(<LoginContainer {...props} />);
+    expect(wrapper.find(LoginPage).length).toBe(1);
+    expect(wrapper.find(LoadingUserPage).length).toBe(0);
+    expect(wrapper.find(Redirect).length).toBe(0);
   });
 
   it("should render LoadingUserPage", () => {
     const props = { isAuth: false, isLoading: true };
-    //const wrapper = shallow(<LoginContainer {...props}/>);
-    //expect(wrapper.find(LoginPage).length).toBe(0)
-    //expect(wrapper.find(LoadingUserPage).length).toBe(1)
-    //expect(wrapper.find(Redirect).length).toBe(0)
+    const wrapper = shallow(<LoginContainer {...props} />);
+    expect(wrapper.find(LoginPage).length).toBe(0);
+    expect(wrapper.find(LoadingUserPage).length).toBe(1);
+    expect(wrapper.find(Redirect).length).toBe(0);
   });
 
   it("should render LoadingUserPage", () => {
     const props = { isAuth: true, isLoading: true };
-    //const wrapper = shallow(<LoginContainer {...props}/>);
-    //expect(wrapper.find(LoginPage).length).toBe(0)
-    //expect(wrapper.find(LoadingUserPage).length).toBe(0)
-    //expect(wrapper.find(Redirect).length).toBe(1)
+    const wrapper = shallow(<LoginContainer {...props} />);
+    expect(wrapper.find(LoginPage).length).toBe(0);
+    expect(wrapper.find(LoadingUserPage).length).toBe(0);
+    expect(wrapper.find(Redirect).length).toBe(1);
   });
 });

@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import LoadingUserPage from "./LoadingUserPage";
+import Progress from "./Progress";
 import { shallow } from "enzyme";
 
-describe("LoadingUserPage tests", () => {
+describe("Progress tests", () => {
   it("renders without crashing", () => {
-    shallow(<LoadingUserPage />);
+    shallow(<Progress />);
   });
 });

@@ -11,9 +11,9 @@ describe("AlbumsContainer tests", () => {
   });
 
   it("should render Albums", () => {
-    const props = { albums: { items: [] } };
+    const props = { albums: { result: { items: [] } } };
     const wrapper = shallow(<AlbumsContainer {...props} />);
-    //expect(wrapper.find(Albums).length).toBe(1)
+    expect(wrapper.find(Albums).length).toBe(1);
     expect(wrapper.find(Progress).length).toBe(0);
     expect(wrapper.find(ErrorSnackbar).length).toBe(0);
   });

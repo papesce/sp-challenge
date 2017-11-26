@@ -11,7 +11,7 @@ import TemplatePage from "../components/TemplatePage";
 export class LoginContainer extends Component {
   componentDidMount() {
     const { location } = this.props;
-    if (isCallback(location)) {
+    if (location && isCallback(location)) {
       const hash = decodeHash(location.hash);
       this.props.setToken(hash.access_token, hash.expirationTime);
     }

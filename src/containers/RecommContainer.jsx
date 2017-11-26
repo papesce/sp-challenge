@@ -15,7 +15,7 @@ export class RecommContainer extends Component {
   }
   render() {
     const { recommendations } = this.props;
-    if (recommendations.results) {
+    if (recommendations && recommendations.results) {
       if (recommendations.results.tracks) {
         return (
           <Recommendations
@@ -25,7 +25,7 @@ export class RecommContainer extends Component {
           />
         );
       }
-    } else if (recommendations.loading) {
+    } else if (recommendations && recommendations.loading) {
       return <Progress status="loading..." />;
     }
     return <Redirect to={process.env.PUBLIC_URL + "/"} />;
