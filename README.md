@@ -1,18 +1,19 @@
 # spotify-challenge
+
 Coding challenge
 
-## Objective:
+## Objective
+
  Create a simple app that uses React and the Spotify API.
 
 ## Live Demo
 
-You can test the latest demo here:
-
-https://papesce-spotify-challenge.herokuapp.com/
+You can test the latest demo [here](https://papesce-spotify-challenge.herokuapp.com/)
 
 ## Screenshots
 
 ### Authentication Flow
+
 To interact with the spotify API is required an authentication token.  To obtain this token is necessary to follow several steps.  The process is described in detail [here](https://developer.spotify.com/web-api/authorization-guide/)
 
 To obtain the token I've used the React-Router capability
@@ -21,10 +22,9 @@ To obtain the token I've used the React-Router capability
 
 ### Search API
 
-The home page allow the user to search for albums. For each album there is an option to to search for recommendations based on the artist of the selected album. In this part the search API from spotify was used. Material-ui was used to speed up the implementation of each component. 
+The home page allow the user to search for albums. For each album there is an option to to search for recommendations based on the artist of the selected album. In this part the search API from spotify was used. Material-ui was used to speed up the implementation of each component.
 
 ![Search Home Page](docs/homepage.png)
-
 
 ### Recommendations API
 
@@ -33,11 +33,11 @@ This component was implemented reusing several components of the previous develo
 
 ![Recommnedations Page](docs/recommendations.png)
 
-## Documentation 
+## Documentation
 
 Detailed documentation links will be available in this section
 
-- [Documentation](docs/DOCUMENTATION.md) 
+- [Documentation](docs/DOCUMENTATION.md)
 
 ## Installation
 
@@ -52,33 +52,32 @@ npm install
 
 npm start
 ```
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-#### `npm start`
+### `npm start`
 
 Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
 
-#### `npm run build`
+### `npm run build`
 
-Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.<br>
+Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
 
 This is the option used for automatic deployment to Heroku (see "heroku-postbuild" option in package.json)
 
-#### `npm test`
+### `npm test`
 
 Run the tests in the console.  The app uses [Jest](https://facebook.github.io/jest/) as its test runner. The tests are located next to the code they are testing so that relative imports appear shorter.
 
-#### `npm run storybook`
+### `npm run storybook`
 
-Run the storybook on http://localhost:9009/.  (Link to latest [Storybook](https://papesce.github.io/storybook/))
+Run the storybook on [http://localhost:9009/](http://localhost:9009/)  (Link to latest [Storybook](https://papesce.github.io/storybook/))
 
-#### `npm run test:coverage` 
+### `npm run test:coverage`
 
 Run the coverage analysis. Latest results can be found [here](https://papesce.github.io/lcov-report)
 

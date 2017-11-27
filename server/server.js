@@ -12,5 +12,6 @@ app.use(express.static(BUILD_PATH)).use("/", router);
 
 // Start her up, boys
 app.listen(app.get("port"), () => {
+  /*eslint no-console: 0*/
   console.log("Express server listening on port " + app.get("port"));
 });
