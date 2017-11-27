@@ -76,12 +76,31 @@ Material-ui has several  ready to use UI components for React.
 Use the following link to visualize the main componentes with a [Storybook](https://papesce.github.io/storybook/).
 
 
+## Redux model
 
+THe redux store is based on three main reducers:
 
-### Calling the Search API
+* Login reducer
+* Search reducer
+* Recommendations reducer
 
+### Login Reducer
 
+The dispatch of the LOGIN_SUCESS action will be intercepted by the login reducer. As a result the state will be updated with the users field containing the auth_token and expiration time.
+
+###  Search Reducer
+
+The dispatch of the SEARCH  action will be intercepted by the thunk-reducer. Using the `redux-thunk-actions` npm package, three actions will be dispatched.  First a SEARCH_STARTED action will be dispatched. With this change of the state the UI can show the loading indicator. Then, the fetch to the spotify search API is dispatched. When a response from the server is received then the SEARCH_SUCCEEDED will be dispatched. In case of error the SEARCH_FAILED action will be dispatched.  This flow can be summarized in the following figure:
+
+![search api](searchapi.png)
+
+The state will contain a field called search with the result and the search term.
+
+```state =  { search: { searchText: "Jewel", result: {albums....}} } ```
+
+This state will be rendered with the `Albums` component.
 
 ### Calling the Recommendations API
 
-## Redux model
+This is implemented in the same way as the Search Reducer.  The Spotify API that is called is the `recommendations` API and the result it is stored in the recommendations field in the state.
+ 

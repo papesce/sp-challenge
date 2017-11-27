@@ -76,7 +76,11 @@ Run the tests in the console.  The app uses [Jest](https://facebook.github.io/je
 
 #### `npm run storybook`
 
-Run the storybook on http://localhost:9009/.  
+Run the storybook on http://localhost:9009/.  (Link to latest [Storybook](https://papesce.github.io/storybook/))
+
+#### `npm run test:coverage` 
+
+Run the coverage analysis. Latest results can be found [here](https://papesce.github.io/lcov-report)
 
 ### License
 
