@@ -22,7 +22,6 @@ export class SearchBar extends Component {
     this.dispatchSearch = this.dispatchSearch.bind(this);
   }
   handleTextChanged(event) {
-    debugger;
     const text = event.target.value;
     if (this.state.typingTimeout) {
       clearTimeout(this.state.typingTimeout);

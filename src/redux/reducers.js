@@ -30,7 +30,6 @@ export function loginReducer(prevState = {}, action) {
 export function searchReducer(prevState = {}, action) {
   switch (action.type) {
     case SEARCH_SUCCEEDED:
-      debugger;
       return {
         albums: {
           searchText: prevState.albums ? prevState.albums.searchText : "",
@@ -40,7 +39,6 @@ export function searchReducer(prevState = {}, action) {
     case SEARCH_FAILED:
       return { albums: JSON.parse(action.payload.response) };
     case SEARCH_STARTED:
-      debugger;
       return {
         albums: {
           searchText: action.payload[0],
