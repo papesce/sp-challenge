@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import * as React from "react";
 import SearchBar from "./SearchBar";
 import AlbumsContainer from "../containers/AlbumsContainer";
 import TemplatePage from "./TemplatePage";
 
-export class HomePage extends Component {
+export class HomePage extends React.Component {
   render() {
     return (
       <TemplatePage>
